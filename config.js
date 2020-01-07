@@ -33,10 +33,10 @@
   },
 
   "storage": {
-    "type": "memcached",
-    "host": "127.0.0.1",
-    "port": 11211,
-    "expire": 2592000
+    "type": "redis",
+    "host": process.env.REDIS_HOST || "127.0.0.1",
+    "port": process.env.REDIS_PORT || "6379",
+    "password": process.env.REDIS_PASSWORD
   },
 
   "documents": {
